@@ -1,4 +1,4 @@
-
+#!python3
 
 # 
 # https://www.pythonguis.com/pyqt5-tutorial/
