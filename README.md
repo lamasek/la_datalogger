@@ -1,2 +1,2 @@
-# la_datalogger
-GUI app for realtime graphs from measurement
+# La Datalogger
+GUI app for realtime graphs from measurement.
