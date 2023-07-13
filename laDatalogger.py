@@ -3,16 +3,41 @@
 # 
 # https://www.pythonguis.com/pyqt5-tutorial/
 
+import importlib.util
+import pip
 
-import serial.tools.list_ports ### FIX it by: pip install pyserial
+
+def lib_check_install(package_name):
+    spec = importlib.util.find_spec(package_name)
+    if spec is None:
+        print(package_name +" is not installed, trying to install...")
+        pip.main(['install', package_name])
+
+lib_check_install('pyserial')
 import serial ### FIX it by: pip install pyserial
+import serial.tools.list_ports ### FIX it by: pip install pyserial
+
+lib_check_install('time')
 import time
+
+lib_check_install('datetime')
 #import datetime
 from datetime import datetime
+
+lib_check_install('numpy')
 import numpy as np ### FIX it by: pip install numpy
+
+lib_check_install('sys')
 import sys
+
+lib_check_install
 import base64
 
+
+ 
+# https://www.pythonguis.com/pyqt5-tutorial/
+
+lib_check_install('PyQt6')
 
 from PyQt6 import QtWidgets ### FIX it by: pip install pyqt6
 from PyQt6 import QtGui
@@ -36,9 +61,11 @@ from PyQt6.QtWidgets import (
     QSpinBox,
 )
 
+lib_check_install('pyqtdarktheme')
 import qdarktheme ### FIX it by: pip install pyqtdarktheme
 
 
+lib_check_install('pyqtgraph')
 import pyqtgraph as pg ### FIX it by: pip install pyqtgraph
 from pyqtgraph import PlotWidget, plot
 from pyqtgraph.Qt import QtCore, QtGui
@@ -46,6 +73,7 @@ from pyqtgraph import AxisItem
 
 
 import sys  # We need sys so that we can pass argv to QApplication
+lib_check_install('os')
 import os
 
 
