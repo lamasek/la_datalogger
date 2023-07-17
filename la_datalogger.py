@@ -678,7 +678,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self.tabGraphs = tab_graphs()
 
 
-
         #self.tabGraphs_scrollAreaLayout = QVBoxLayout()
         #self.tabGraphs_scrollAreaLayout(self.tabGraphs)
 
@@ -715,7 +714,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         # schedule detect serial ports
         self.timer_serRefresh = QtCore.QTimer()
-        self.timer_serRefresh.setInterval(1000) # each secoond
+        self.timer_serRefresh.setInterval(1000) # each second
         self.timer_serRefresh.timeout.connect(inputSerial.serial_refresh)
         self.timer_serRefresh.start()
 
@@ -764,14 +763,13 @@ class MainWindow(QtWidgets.QMainWindow):
     #        print(self.pos())
 
 
-
-
 def main():
     global data
     print("Hello DATALoggerWorld!")
 
 
     # for PyQT6 is obsolette
+    #use only for PyQT6 for Hight DPI monitors
 
     #for High DPI monitors with scaling enabled
     # pygraph DOC https://pyqtgraph.readthedocs.io/en/latest/how_to_use.html
@@ -786,11 +784,9 @@ def main():
     #QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_UseHighDpiPixmaps, True) #use highdpi icons
 
 
-
     app = QtWidgets.QApplication(sys.argv)
     # Apply dark theme to Qt application
     app.setStyleSheet(qdarktheme.load_stylesheet())
-
 
 
     mainWindow = MainWindow()
@@ -800,12 +796,8 @@ def main():
     sys.exit(retcode)
 
 
-
-
-
 if __name__ == "__main__":
     main()
-
 
 # TODO
 # knizka o pyqt https://pythoncourses.gumroad.com/l/pysqtsamples za 10+USD
