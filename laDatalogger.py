@@ -483,7 +483,7 @@ class tab_help(QWidget):
 LaDatalogger
 
 Author:
-    Josef la Masek masek2050@gmail.com
+    Josef La Masek masek2050@gmail.com
 
 Basic description:
 Each probe (LUXmeter, thermometer, ..) sends periodically measurings as serial output over USB.
