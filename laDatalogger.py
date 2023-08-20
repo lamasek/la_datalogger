@@ -418,7 +418,7 @@ class tab_graphs(QWidget):
             data[item_name]['data_line'].setData(data[item_name]['time'], data[item_name]['data'], symbol ='o', symbolSize = 5, symbolBrush =(0, 114, 189))  # Update the data.
             #self.date_axis.setData()
 
-            #
+            # another option is to add second line item with zero value
             if False: # LaAutorange - 0 is always visible on Y plus show min/max                
                 timeMin = min(data[item_name]['time'])
                 timeMax = max(data[item_name]['time'])
@@ -550,6 +550,7 @@ UI with graphs begans to be nonresponsive since 100 000 data points. So consider
         self.setLayout(self.layout)
         self.show() # show all the widgets
 
+#region logo
 #https://www.base64encode.org/
 logo_png_base64Encoded = '''
 PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjwh
@@ -703,6 +704,7 @@ PSI5MC4yNDUyOTMiCiAgICAgICBjeT0iNDE2LjY3OTM4IgogICAgICAgcj0iOC40NzUxNzAxIgog
 ICAgICAgY2xhc3M9IlVub3B0aW1pY2VkVHJhbnNmb3JtcyIKICAgICAgIHRyYW5zZm9ybT0ibWF0
 cml4KDEuMzAyNTg5OSwwLDAsMS4zMDI1ODk5LDM0NC45NTQ0NCwtMzI5LjgzOTkpIiAvPgogIDwv
 Zz4KPC9zdmc+Cg=='''
+#endregion 
 
 class MainWindow(QtWidgets.QMainWindow):
 
